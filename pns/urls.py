@@ -19,6 +19,7 @@ import app.views as appViews
 from django.conf.urls import url
 
 urlpatterns = [
+	url(r'^$', appViews.home, name='home'),
 	url(r'test', appViews.testSite, name='testSite'),
     path('admin/', admin.site.urls),
 ]

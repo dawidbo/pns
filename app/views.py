@@ -7,3 +7,8 @@ def testSite(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
     return HttpResponse("test passed _ string form my site")
+
+def home(request):
+    """Renders the home page."""
+    assert isinstance(request, HttpRequest)
+    return HttpResponse("Site is unedr maintanance!")
