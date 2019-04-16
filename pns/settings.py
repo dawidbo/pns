@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 import os
+from lib.base_func import getSec
+
+secDir = getSec()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,12 +22,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^=33sc^a)ckid@7g+g&8*btkwvc#6u^r=o(asiyi-83a!4048w'
+SECRET_KEY = secDir['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = secDir['DEBUG']
 
-ALLOWED_HOSTS = ['paznocienastopce.pl','localhost','127.0.0.1','0.0.0.0','46.41.148.140']
+ALLOWED_HOSTS = ['paznocienastopce.pl','localhost','127.0.0.1','0.0.0.0','46.41.148.140','lastchar.com']
 
 
 # Application definition
@@ -76,11 +79,11 @@ WSGI_APPLICATION = 'pns.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbpns',
-        'USER': 'db_pns',
-        'PASSWORD': 'Labul;08',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'NAME': secDir['NAME'],
+        'USER': secDir['USER'],
+        'PASSWORD': secDir['PASSWORD'],
+        'HOST': secDir['HOST'],
+        'PORT': secDir['PORT']
     }
 }
 
