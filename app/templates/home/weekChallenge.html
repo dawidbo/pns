@@ -1,0 +1,8 @@
+<div class="jumbotron jumbotron-fluid jumbotron-color">
+	<div class="container">
+		{% for elt in weekChallenge %}
+			<p class="text-md-left font-weight-bold">{{ elt.title }}</p>
+			<p class="text-md-left font-weight-light">{{ elt.content }}</p>
+		{% endfor %}
+	</div>
+</div>

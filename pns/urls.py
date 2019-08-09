@@ -20,6 +20,8 @@ from django.conf.urls import url
 
 urlpatterns = [
 	url(r'^$', appViews.home, name='home'),
-	url(r'test', appViews.testSite, name='testSite'),
-    path('admin/', admin.site.urls),
+    url(r'home/', appViews.home, name='home'),
+    url(r'family/', appViews.family, name='family'),
+    url(r'programming/', appViews.programming, name='programming'),
+    path('admin/', admin.site.urls)
 ]

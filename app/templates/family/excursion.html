@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid jumbotron-color">
+	<div class="container">
+		<div class="text-md-center font-weight-light">
+			<table class="table table-hover">
+				<thead>
+				    <tr>
+				      <th scope="col">Date</th>
+				      <th scope="col">Destynation</th>
+				      <th scope="col">Description</th>
+				    </tr>
+				  </thead>
+				{% for elt in excursion%}
+				<tr>
+					<td>{{elt.createDate}}</td>
+					<td>{{elt.destination}}</td>
+					<td>{{elt.description}}</td>
+				</td>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>

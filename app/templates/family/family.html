@@ -1,0 +1,26 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<!-- Pills -->
+<div class="col-md-12 ">
+	<div class="row">
+		<div class="col-md-12 text-center" >
+			<ul class="nav nav-pills m-3" id="pills-tab" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active lifont" id="pills-family-tab" data-toggle="pill" href="#pills-family" role="tab" aria-controls="pills-family" aria-selected="true">First words</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link lifont" id="pills-excursion-tab" data-toggle="pill" href="#pills-excursion" role="tab" aria-controls="pills-excursion" aria-selected="true">Excursions</a>
+				</li>
+			</ul>
+			<div class="tab-content ml-3 text-left">
+				<div class="tab-pane fade show active" id="pills-family" role="tabpanel" aria-labelledby="pills-family-tab">
+					{% include 'family/firstWords.html' %}
+				</div>
+				<div class="tab-pane fade show" id="pills-excursion" role="tabpanel" aria-labelledby="pills-excursion-tab">
+					{% include 'family/excursion.html' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

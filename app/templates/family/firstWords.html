@@ -1,0 +1,22 @@
+<div class="jumbotron jumbotron-fluid jumbotron-color">
+	<div class="container">
+		<div class="text-md-center font-weight-light">
+			<table class="table table-hover">
+				<thead>
+				    <tr>
+				      <th scope="col">Word</th>
+				      <th scope="col">Wojtek</th>
+				      <th scope="col">Lena</th>
+				    </tr>
+				  </thead>
+				{% for elt in firstWord%}
+				<tr>
+					<td>{{elt.word}}</td>
+					<td>{{elt.wojtekWord}}</td>
+					<td>{{elt.lenaWord}}</td>
+				</td>
+				{% endfor %}
+			</table>
+		</div>
+	</div>
+</div>

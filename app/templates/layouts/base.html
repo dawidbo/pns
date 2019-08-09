@@ -1,0 +1,53 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="pl">
+
+	<head>
+		<title>{{ title }}</title>
+		<!-- bootstarp include -->
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="{% static 'css/bootstrap-4.1.3/bootstrap.min.css' %}">
+		<!-- main site css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/site/site.css' %}">
+	</head>
+
+	<body id="top">
+
+		<!-- Menu -->
+		<div class="navbar navbar-expand-md navbar-light bg-custom-bar">
+			<a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'img/flowerNoBgOne.png' %}" width="30" height="30" class="d-inline-block align-top"><span class="brand-name"> Home</span></a>
+
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="icon-bar top-bar"></span>
+				<span class="icon-bar middle-bar"></span>
+				<span class="icon-bar bottom-bar"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a title="Sharing time and family history" class="nav-link brand-name" href="{% url 'family'%}">Family</a></li>
+					<li class="nav-item"><a title="Programming languages and simple algorithms" class="nav-link brand-name" href="{% url 'programming'%}">Programming</a></li>
+					<li class="nav-item"><a title="Operating systems and configuration" class="nav-link brand-name" href="{% url 'home'%}">OS</a></li>
+					<li class="nav-item"><a title="Cisco CCNA notes" class="nav-link brand-name" href="{% url 'home'%}">Networking</a></li>
+					<li class="nav-item"><a title="Machine Lerning notes" class="nav-link brand-name" href="{% url 'home'%}">ML</a></li>
+					<li class="nav-item"><a class="nav-link brand-name" href="{% url 'home'%}">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+		{% block content %}
+        {% endblock %}
+
+		<!-- Footer -->
+		 <div class="bg-custom-bar text-center brand-name font-weight-light" style="font-size: 10px;">
+            <p> &copy; {{ year }}  - TAU </p>
+        </div>
+
+		<!-- For bootstrap functionality jquery popper bootstrap  -->
+		<script type="text/javascript" src="{% static 'js/jquery-core/jquery-3.3.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/popper-1.14.4/popper-1.14.4.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap-4.1.3/bootstrap.min.js' %}"></script>
+	</body>
+</html>

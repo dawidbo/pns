@@ -1,3 +1,12 @@
-db.sqlite3
 *.pyo
 *.pyc
+.mypy_cache/
+.DS_Store
+*.sqlite3
+media/
+*.db
+*.pid
+# django migrations 
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py*.pyo
