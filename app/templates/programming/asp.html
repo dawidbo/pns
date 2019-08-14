@@ -1,0 +1,24 @@
+<div class="jumbotron jumbotron-fluid jumbotron-color">
+    <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+              <a class="nav-link active" id="v-pills-classic-tab" data-toggle="pill" href="#v-pills-classic" role="tab" aria-controls="v-pills-classic" aria-selected="true">ASP Classic</a>
+              <a class="nav-link" id="v-pills-aspx-tab" data-toggle="pill" href="#v-pills-aspx" role="tab" aria-controls="v-pills-aspx" aria-selected="false">ASPX</a>
+              <a class="nav-link" id="v-pills-mvc-tab" data-toggle="pill" href="#v-pills-mvc" role="tab" aria-controls="v-pills-mvc" aria-selected="false">MVC</a>
+              <a class="nav-link" id="v-pills-csharp-tab" data-toggle="pill" href="#v-pills-csharp" role="tab" aria-controls="v-pills-csharp" aria-selected="false">C#</a>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="tab-content" id="v-pills-tabContent">
+              <div class="tab-pane fade show active" id="v-pills-classic" role="tabpanel" aria-labelledby="v-pills-classic-tab">
+                  {% include 'programming/asp/asp_classic/asp_classic.html' %}
+              </div>
+              <div class="tab-pane fade" id="v-pills-aspx" role="tabpanel" aria-labelledby="v-pills-aspx-tab">...</div>
+              <div class="tab-pane fade" id="v-pills-mvc" role="tabpanel" aria-labelledby="v-pills-mvc-tab">...</div>
+              <div class="tab-pane fade" id="v-pills-csharp" role="tabpanel" aria-labelledby="v-pills-csharp-tab">...</div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

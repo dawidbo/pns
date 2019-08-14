@@ -1,0 +1,30 @@
+<!-- this code is generate by https://tohtml.com/vbnet/ theme navy -->
+<p>
+	<h5>Dictionary example</h5>
+</p>
+
+
+<pre style="color:#000020;background:#f6f8ff;"><span style="color:#200080; font-weight:bold; ">Dim</span> i<span style="color:#308080; ">,</span> dicItem<span style="color:#308080; ">,</span> dicKeys
+<span style="color:#200080; font-weight:bold; ">Dim</span> dic <span style="color:#308080; ">:</span> <span style="color:#200080; font-weight:bold; ">Set</span> dic <span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">CreateObject</span><span style="color:#308080; ">(</span><span style="color:#1060b6; ">"Scripting.Dictionary"</span><span style="color:#308080; ">)</span>
+
+dic<span style="color:#008c00; ">.</span>Add <span style="color:#1060b6; ">"o"</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"one"</span>
+dic<span style="color:#008c00; ">.</span>Add <span style="color:#1060b6; ">"t"</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"two"</span>
+dic<span style="color:#008c00; ">.</span>Add <span style="color:#1060b6; ">"r"</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"tree"</span>
+dic<span style="color:#008c00; ">.</span>Add <span style="color:#1060b6; ">"f"</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"four"</span>
+
+dicKeys <span style="color:#308080; ">=</span> dic<span style="color:#008c00; ">.</span>Keys
+dicItem <span style="color:#308080; ">=</span> dic<span style="color:#008c00; ">.</span>Items
+
+<span style="color:#200080; font-weight:bold; ">If</span> dic<span style="color:#008c00; ">.</span>Exists<span style="color:#308080; ">(</span><span style="color:#1060b6; ">"o"</span><span style="color:#308080; ">)</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+	<span style="color:#200080; font-weight:bold; ">For</span> i <span style="color:#308080; ">=</span> <span style="color:#008c00; ">0</span> <span style="color:#200080; font-weight:bold; ">To</span> dic<span style="color:#008c00; ">.</span>Count <span style="color:#308080; ">-</span> <span style="color:#008c00; ">1</span>
+		Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Key: "</span> <span style="color:#308080; ">&amp;</span> dicKeys<span style="color:#308080; ">(</span>i<span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span><span style="color:#1060b6; ">" Item: "</span> <span style="color:#308080; ">&amp;</span> dicItem<span style="color:#308080; ">(</span>i<span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+	<span style="color:#200080; font-weight:bold; ">Next</span>
+<span style="color:#200080; font-weight:bold; ">Else</span>
+	Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Specified key doesn't exist."</span>
+<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+
+<span style="color:#595979; ">'Key: o Item: one</span>
+<span style="color:#595979; ">'Key: t Item: two</span>
+<span style="color:#595979; ">'Key: r Item: tree</span>
+<span style="color:#595979; ">'Key: f Item: four</span>
+</pre>

@@ -1,6 +1,6 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-<!-- Pills -->
+
 <div class="col-md-12 ">
 	<div class="row">
 		<div class="col-md-12 text-center" >
@@ -11,9 +11,11 @@
 				<li class="nav-item">
 					<a class="nav-link lifont" id="pills-git-tab" data-toggle="pill" href="#pills-git" role="tab" aria-controls="pills-git" aria-selected="false">Git</a>
 				</li>
+
 				<li class="nav-item">
-					<a class="nav-link lifont" id="pills-asp-tab" data-toggle="pill" href="#pills-asp" role="tab" aria-controls="pills-asp" aria-selected="false">ASP & MVC & Core</a>
+					<a class="nav-link lifont" id="pills-asp-tab" data-toggle="pill" href="#pills-asp" role="tab" aria-controls="pills-asp" aria-selected="false">ASP</a>
 				</li>
+
 				<li class="nav-item">
 					<a class="nav-link lifont" id="pills-sql-tab" data-toggle="pill" href="#pills-sql" role="tab" aria-controls="pills-sql" aria-selected="false">SQL</a>
 				</li>
@@ -27,7 +29,6 @@
 					<a class="nav-link lifont" id="pills-bash-tab" data-toggle="pill" href="#pills-bash" role="tab" aria-controls="pills-bash" aria-selected="false">Bash</a>
 				</li>
 			</ul>
-
 			<div class="tab-content ml-3 text-left" id="pills-tabContent">
 				<div class="tab-pane fade show active" id="pills-intro" role="tabpanel" aria-labelledby="pills-intro-tab">
 					{% include 'programming/intro.html' %}
@@ -36,23 +37,21 @@
 					{% include 'programming/git.html' %}
 				</div>
 				<div class="tab-pane fade" id="pills-asp" role="tabpanel" aria-labelledby="pills-asp-tab">
-					{% include 'programming/git.html' %}
+					{% include 'programming/asp.html' %}
 				</div>
 				<div class="tab-pane fade" id="pills-sql" role="tabpanel" aria-labelledby="pills-sql-tab">
-					{% include 'programming/git.html' %}
+
 				</div>
 				<div class="tab-pane fade" id="pills-js" role="tabpanel" aria-labelledby="pills-js-tab">
-					{% include 'programming/git.html' %}
+
 				</div>
 				<div class="tab-pane fade" id="pills-mtv" role="tabpanel" aria-labelledby="pills-mtv-tab">
-					{% include 'programming/git.html' %}
+
 				</div>
 				<div class="tab-pane fade" id="pills-bash" role="tabpanel" aria-labelledby="pills-bash-tab">
-					{% include 'programming/git.html' %}
+
 				</div>
 			</div>
-
-		</div>
 	</div>
 </div>
 {% endblock %}

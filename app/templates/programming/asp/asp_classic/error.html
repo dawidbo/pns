@@ -1,0 +1,52 @@
+<!-- this code is generate by https://tohtml.com/vbnet/ theme navy -->
+<p>
+	<h5>Try Catch Clouse</h5>
+</p>
+<pre style="color:#000020;background:#f6f8ff;"><span style="color:#595979; ">'Try'</span>
+<span style="color:#200080; font-weight:bold; ">On</span> <span style="color:#200080; font-weight:bold; ">Error</span> <span style="color:#200080; font-weight:bold; ">Resume</span> <span style="color:#200080; font-weight:bold; ">Next</span>
+<span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span><span style="color:#200080; font-weight:bold; ">Clear</span>
+
+<span style="color:#200080; font-weight:bold; ">Dim</span> i <span style="color:#308080; ">:</span> i <span style="color:#308080; ">=</span> <span style="color:#008c00; ">2</span><span style="color:#308080; ">/</span><span style="color:#008c00; ">0</span>
+
+<span style="color:#595979; ">'Catch'</span>
+<span style="color:#200080; font-weight:bold; ">If</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Number <span style="color:#308080; ">&lt;</span><span style="color:#308080; ">&gt;</span> <span style="color:#008c00; ">0</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Error: "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Number <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Error (Hex): "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Hex</span><span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Number<span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Source: "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Source <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Description: "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Description <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span><span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#595979; ">'Stop to read code forward'</span>
+<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+
+<span style="color:#595979; ">'Reset error handling'</span>
+<span style="color:#200080; font-weight:bold; ">On</span> <span style="color:#200080; font-weight:bold; ">Error</span> <span style="color:#200080; font-weight:bold; ">Goto</span> <span style="color:#008c00; ">0</span>
+</pre>
+
+
+<div style="margin: 40px 0px 40px 0px;">
+	<h5>Try catch and raise error</h5>
+</div>
+
+
+<pre style="color:#000020;background:#f6f8ff;"><span style="color:#595979; ">'Try'</span>
+<span style="color:#200080; font-weight:bold; ">On</span> <span style="color:#200080; font-weight:bold; ">Error</span> <span style="color:#200080; font-weight:bold; ">Resume</span> <span style="color:#200080; font-weight:bold; ">Next</span>
+<span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span><span style="color:#200080; font-weight:bold; ">Clear</span>
+
+<span style="color:#200080; font-weight:bold; ">Dim</span> i <span style="color:#308080; ">:</span> i <span style="color:#308080; ">=</span> <span style="color:#008c00; ">0</span>
+
+<span style="color:#200080; font-weight:bold; ">If</span> i <span style="color:#308080; ">=</span> <span style="color:#008c00; ">0</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+   <span style="color:#200080; font-weight:bold; ">Call</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span><span style="color:#200080; font-weight:bold; ">Raise</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">65500</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"Function getMyId()"</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"Parse json error"</span><span style="color:#308080; ">)</span>
+<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+<span style="color:#200080; font-weight:bold; ">Call</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span><span style="color:#200080; font-weight:bold; ">Raise</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">65501</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"Function getYourId()"</span><span style="color:#308080; ">,</span> <span style="color:#1060b6; ">"Always raise this exception as first - LIFO"</span><span style="color:#308080; ">)</span>
+
+<span style="color:#595979; ">'Catch'</span>
+<span style="color:#200080; font-weight:bold; ">If</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Number <span style="color:#308080; ">&lt;</span><span style="color:#308080; ">&gt;</span> <span style="color:#008c00; ">0</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Error: "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Number <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Error (Hex): "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Hex</span><span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Number<span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Source: "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Source <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Description: "</span> <span style="color:#308080; ">&amp;</span> <span style="color:#200080; font-weight:bold; ">Err</span><span style="color:#008c00; ">.</span>Description <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+    Response<span style="color:#008c00; ">.</span><span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#595979; ">'Stop to read code forward'</span>
+<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+
+<span style="color:#595979; ">'Reset error handling'</span>
+<span style="color:#200080; font-weight:bold; ">On</span> <span style="color:#200080; font-weight:bold; ">Error</span> <span style="color:#200080; font-weight:bold; ">Goto</span> <span style="color:#008c00; ">0</span>
+</pre>

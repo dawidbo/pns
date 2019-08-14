@@ -1,0 +1,133 @@
+<!-- this code is generate by https://tohtml.com/vbnet/ theme navy -->
+<p>
+	<h5>Class example</h5>
+</p>
+
+
+<pre style="color:#000020;background:#f6f8ff;"><span style="color:#200080; font-weight:bold; ">Class</span> Person
+	<span style="color:#200080; font-weight:bold; ">Private</span> <span style="color:#200080; font-weight:bold; ">name</span>
+	<span style="color:#200080; font-weight:bold; ">Private</span> <span style="color:#200080; font-weight:bold; ">alias</span>
+
+	<span style="color:#595979; ">'execute when object is created'</span>
+	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Sub</span> Class_Initialize
+  		<span style="color:#200080; font-weight:bold; ">name</span> 			<span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">Empty</span>
+  		<span style="color:#200080; font-weight:bold; ">alias</span>	 		<span style="color:#308080; ">=</span> <span style="color:#1060b6; ">"unknown"</span>
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Sub</span>
+
+	<span style="color:#595979; ">'like contructor'</span>
+	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Default</span> <span style="color:#200080; font-weight:bold; ">Function</span> construct<span style="color:#308080; ">(</span>p_name<span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">name</span>			<span style="color:#308080; ">=</span> p_name
+		<span style="color:#200080; font-weight:bold; ">Set</span> construct 	<span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">Me</span>
+	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Function</span>
+
+	<span style="color:#595979; ">'execute when object is closed'</span>
+	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Sub</span> Class_Terminate
+  		<span style="color:#200080; font-weight:bold; ">name</span> 			<span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">Empty</span>
+  		<span style="color:#200080; font-weight:bold; ">alias</span>	 		<span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">Empty</span>
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Sub</span>
+
+ 	<span style="color:#595979; ">'setters and getters'</span>
+ 	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Property</span> <span style="color:#200080; font-weight:bold; ">Let</span> setName<span style="color:#308080; ">(</span>value<span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">name</span> <span style="color:#308080; ">=</span> value
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Property</span>
+
+ 	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Property</span> <span style="color:#200080; font-weight:bold; ">Let</span> setAlias<span style="color:#308080; ">(</span>value<span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">alias</span> <span style="color:#308080; ">=</span> value
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Property</span>
+
+ 	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Property</span> <span style="color:#200080; font-weight:bold; ">Get</span> getName<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> ans <span style="color:#308080; ">:</span> ans <span style="color:#308080; ">=</span> <span style="color:#1060b6; ">"unknown"</span>
+
+		<span style="color:#200080; font-weight:bold; ">If</span> <span style="color:#200080; font-weight:bold; ">Not</span> <span style="color:#200080; font-weight:bold; ">IsEmpty</span><span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">name</span><span style="color:#308080; ">)</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+			ans <span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">name</span>
+		<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+
+		getName <span style="color:#308080; ">=</span> ans
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Property</span>
+
+ 	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Property</span> <span style="color:#200080; font-weight:bold; ">Get</span> getAlias<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+		getAlias <span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">alias</span>
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Property</span>
+
+ 	<span style="color:#595979; ">'Methods'</span>
+ 	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Sub</span> getFullNames<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+ 		Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Name: "</span> <span style="color:#308080; ">&amp;</span> getName<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">" Alias: "</span> <span style="color:#308080; ">&amp;</span> getAlias<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Sub</span>
+
+ 	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Sub</span> getFullVolews<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+ 		Response<span style="color:#008c00; ">.</span>Write <span style="color:#1060b6; ">"Name no. volwes: "</span> <span style="color:#308080; ">&amp;</span> getNameVowels<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">" Alias no. volwes: "</span> <span style="color:#308080; ">&amp;</span> getAliasVowels<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span> <span style="color:#308080; ">&amp;</span> <span style="color:#1060b6; ">"&lt;br&gt;"</span>
+ 	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Sub</span>
+
+	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Function</span> getNameVowels<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> ans <span style="color:#308080; ">:</span> ans <span style="color:#308080; ">=</span> <span style="color:#008c00; ">0</span>
+		<span style="color:#200080; font-weight:bold; ">If</span> <span style="color:#200080; font-weight:bold; ">Not</span> <span style="color:#200080; font-weight:bold; ">IsEmpty</span><span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">name</span><span style="color:#308080; ">)</span> <span style="color:#200080; font-weight:bold; ">And</span> <span style="color:#200080; font-weight:bold; ">name</span> <span style="color:#308080; ">&lt;</span><span style="color:#308080; ">&gt;</span> <span style="color:#1060b6; ">"unknown"</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+			ans <span style="color:#308080; ">=</span> getVowels<span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">name</span><span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+		getNameVowels <span style="color:#308080; ">=</span> ans
+	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Function</span>
+
+	<span style="color:#200080; font-weight:bold; ">Public</span> <span style="color:#200080; font-weight:bold; ">Function</span> getAliasVowels<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> ans <span style="color:#308080; ">:</span> ans <span style="color:#308080; ">=</span> <span style="color:#008c00; ">0</span>
+		<span style="color:#200080; font-weight:bold; ">If</span> <span style="color:#200080; font-weight:bold; ">Not</span> <span style="color:#200080; font-weight:bold; ">IsEmpty</span><span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">alias</span><span style="color:#308080; ">)</span> <span style="color:#200080; font-weight:bold; ">And</span> <span style="color:#200080; font-weight:bold; ">alias</span> <span style="color:#308080; ">&lt;</span><span style="color:#308080; ">&gt;</span> <span style="color:#1060b6; ">"unknown"</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+			ans <span style="color:#308080; ">=</span> getVowels<span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">alias</span><span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+		getAliasVowels <span style="color:#308080; ">=</span> ans
+	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Function</span>
+
+	<span style="color:#200080; font-weight:bold; ">Private</span> <span style="color:#200080; font-weight:bold; ">Function</span> getVowels<span style="color:#308080; ">(</span>word<span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> volwesArr <span style="color:#308080; ">:</span> volwesArr <span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">Array</span><span style="color:#308080; ">(</span><span style="color:#1060b6; ">"a"</span><span style="color:#308080; ">,</span><span style="color:#1060b6; ">"e"</span><span style="color:#308080; ">,</span><span style="color:#1060b6; ">"i"</span><span style="color:#308080; ">,</span><span style="color:#1060b6; ">"o"</span><span style="color:#308080; ">,</span><span style="color:#1060b6; ">"u"</span><span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> wordArr <span style="color:#308080; ">:</span> wordArr <span style="color:#308080; ">=</span> wordToArray<span style="color:#308080; ">(</span>word<span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> sum <span style="color:#308080; ">:</span> sum <span style="color:#308080; ">=</span> <span style="color:#008c00; ">0</span>
+
+		<span style="color:#200080; font-weight:bold; ">For</span> <span style="color:#200080; font-weight:bold; ">Each</span> letter <span style="color:#200080; font-weight:bold; ">In</span> wordArr
+			<span style="color:#200080; font-weight:bold; ">For</span> <span style="color:#200080; font-weight:bold; ">Each</span> volwes <span style="color:#200080; font-weight:bold; ">in</span> volwesArr
+				<span style="color:#200080; font-weight:bold; ">If</span> letter <span style="color:#308080; ">=</span> volwes <span style="color:#200080; font-weight:bold; ">Then</span>
+					sum <span style="color:#308080; ">=</span> sum <span style="color:#308080; ">+</span> <span style="color:#008c00; ">1</span>
+				<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+			<span style="color:#200080; font-weight:bold; ">Next</span>
+		<span style="color:#200080; font-weight:bold; ">Next</span>
+		getVowels <span style="color:#308080; ">=</span> sum
+	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Function</span>
+
+	<span style="color:#200080; font-weight:bold; ">Private</span> <span style="color:#200080; font-weight:bold; ">Function</span> wordToArray<span style="color:#308080; ">(</span>word<span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> wordArr<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">Dim</span> wordLen <span style="color:#308080; ">:</span> wordLen <span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">Len</span><span style="color:#308080; ">(</span>word<span style="color:#308080; ">)</span>
+		<span style="color:#200080; font-weight:bold; ">If</span> wordLen <span style="color:#308080; ">&gt;</span> <span style="color:#008c00; ">0</span> <span style="color:#200080; font-weight:bold; ">Then</span>
+			<span style="color:#200080; font-weight:bold; ">ReDim</span> wordArr<span style="color:#308080; ">(</span>wordLen <span style="color:#308080; ">-</span><span style="color:#008c00; ">1</span><span style="color:#308080; ">)</span>
+			<span style="color:#595979; ">'ReDim Preserve myDynArray(3) 'Preserve - leave old data in array</span>
+			<span style="color:#200080; font-weight:bold; ">For</span> i <span style="color:#308080; ">=</span> <span style="color:#008c00; ">1</span> <span style="color:#200080; font-weight:bold; ">To</span> wordLen
+				wordArr<span style="color:#308080; ">(</span>i<span style="color:#308080; ">-</span><span style="color:#008c00; ">1</span><span style="color:#308080; ">)</span> <span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">Mid</span><span style="color:#308080; ">(</span>word<span style="color:#308080; ">,</span> i<span style="color:#308080; ">,</span> <span style="color:#008c00; ">1</span><span style="color:#308080; ">)</span>
+			<span style="color:#200080; font-weight:bold; ">Next</span>
+		<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">If</span>
+		wordToArray <span style="color:#308080; ">=</span> wordArr
+	<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Function</span>
+<span style="color:#200080; font-weight:bold; ">End</span> <span style="color:#200080; font-weight:bold; ">Class</span>
+
+
+<span style="color:#595979; ">'Create Objects'</span>
+
+<span style="color:#200080; font-weight:bold; ">Dim</span>  Lena <span style="color:#308080; ">:</span> <span style="color:#200080; font-weight:bold; ">Set</span> Lena <span style="color:#308080; ">=</span> <span style="color:#200080; font-weight:bold; ">new</span> Person
+Lena<span style="color:#008c00; ">.</span>getFullNames<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+Lena<span style="color:#008c00; ">.</span>getFullVolews<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+Lena<span style="color:#008c00; ">.</span>setName <span style="color:#308080; ">=</span> <span style="color:#1060b6; ">"Lena"</span>
+Lena<span style="color:#008c00; ">.</span>setAlias <span style="color:#308080; ">=</span> <span style="color:#1060b6; ">"Jaja"</span>
+Lena<span style="color:#008c00; ">.</span>getFullNames<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+Lena<span style="color:#008c00; ">.</span>getFullVolews<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+
+<span style="color:#200080; font-weight:bold; ">Dim</span> Wojtek <span style="color:#308080; ">:</span> <span style="color:#200080; font-weight:bold; ">Set</span> Wojtek <span style="color:#308080; ">=</span> <span style="color:#308080; ">(</span><span style="color:#200080; font-weight:bold; ">new</span> Person<span style="color:#308080; ">)</span><span style="color:#308080; ">(</span><span style="color:#1060b6; ">"Wojtek"</span><span style="color:#308080; ">)</span>
+Wojtek<span style="color:#008c00; ">.</span>getFullNames<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+Wojtek<span style="color:#008c00; ">.</span>getFullVolews<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+Wojtek<span style="color:#008c00; ">.</span>setAlias <span style="color:#308080; ">=</span> <span style="color:#1060b6; ">"BraveHeart"</span>
+Wojtek<span style="color:#008c00; ">.</span>getFullNames<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+Wojtek<span style="color:#008c00; ">.</span>getFullVolews<span style="color:#308080; ">(</span><span style="color:#308080; ">)</span>
+
+
+<span style="color:#595979; ">'Name: unknown Alias: unknown</span>
+<span style="color:#595979; ">'Name no. volwes: 0 Alias no. volwes: 0</span>
+<span style="color:#595979; ">'Name: Lena Alias: Jaja</span>
+<span style="color:#595979; ">'Name no. volwes: 2 Alias no. volwes: 2</span>
+<span style="color:#595979; ">'Name: Wojtek Alias: unknown</span>
+<span style="color:#595979; ">'Name no. volwes: 2 Alias no. volwes: 0</span>
+<span style="color:#595979; ">'Name: Wojtek Alias: BraveHeart</span>
+<span style="color:#595979; ">'Name no. volwes: 2 Alias no. volwes: 4</span>
+</pre>
