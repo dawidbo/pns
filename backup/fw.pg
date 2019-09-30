@@ -1,0 +1,51 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.1
+-- Dumped by pg_dump version 11.1
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: app_firstwords; Type: TABLE DATA; Schema: public; Owner: db_pns
+--
+
+COPY public.app_firstwords (id, word, "wojtekWord", "lenaWord", "createDate", creator_id) FROM stdin;
+1	tata	tata	tata	2019-08-08 13:43:01.762079+02	1
+2	mama	mama	mama	2019-08-08 13:43:11.388049+02	1
+3	babcia	baba	baba	2019-08-08 13:43:23.057847+02	1
+4	brzydki	be	be	2019-08-08 13:43:42.218658+02	1
+5	autobus	ata	brum brum	2019-08-08 13:43:58.352383+02	1
+6	ksiezyc	moon	moon	2019-08-08 13:44:12.151715+02	1
+7	chodz	oc	oc	2019-08-08 13:44:27.246972+02	1
+8	wracaj	jaja ju	niuniu wraka	2019-08-08 13:44:52.65989+02	1
+9	lena	jaja	ja	2019-08-08 13:45:13.244146+02	1
+10	wojtek	ja	niuniu	2019-08-08 13:45:27.016525+02	1
+11	spac	pac	pac	2019-08-08 13:45:38.655848+02	1
+12	bajka	pa	baja	2019-08-08 13:47:00.025408+02	1
+13	deszcz	pak pak	kap kap	2019-08-08 13:47:34.460799+02	1
+14	tak	oki	kak	2019-08-08 13:48:14.130809+02	1
+15	Lena przewrocila domek z klockow	Tata dom bam jaja	-	2019-08-08 13:49:37.28623+02	1
+\.
+
+
+--
+-- Name: app_firstwords_id_seq; Type: SEQUENCE SET; Schema: public; Owner: db_pns
+--
+
+SELECT pg_catalog.setval('public.app_firstwords_id_seq', 15, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+

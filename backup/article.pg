@@ -1,0 +1,40 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 11.1
+-- Dumped by pg_dump version 11.1
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Data for Name: app_article; Type: TABLE DATA; Schema: public; Owner: db_pns
+--
+
+COPY public.app_article (id, content, description, active, "createDate", creator_id, section_id, title) FROM stdin;
+1	One Small Step for Man!  Read and write articles help you to be better programmer. Share your knowledge.	First news	t	2019-08-08 09:08:44.105826+02	1	2	Welocme
+3	On 2019-08-19 best resolve will be added.	new challenge	t	2019-08-09 10:50:34.904768+02	1	2	New challenge has been added
+2	Reverse words in a given String. \r\nInput : "abcdefgh"\r\nOutput : "hgfedcba".	Reverse string	t	2019-08-09 10:50:34.919854+02	1	3	First challenge
+4	This section contains insights in a given programming language that the programmer encounters in his daily work.	same	t	2019-08-09 12:18:53.250471+02	1	4	About this section
+\.
+
+
+--
+-- Name: app_article_id_seq; Type: SEQUENCE SET; Schema: public; Owner: db_pns
+--
+
+SELECT pg_catalog.setval('public.app_article_id_seq', 4, true);
+
+
+--
+-- PostgreSQL database dump complete
+--
+
